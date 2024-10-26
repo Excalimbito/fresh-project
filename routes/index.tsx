@@ -1,25 +1,39 @@
-import { useSignal } from "@preact/signals";
-import Counter from "../islands/Counter.tsx";
+import SubHeading from "../components/typo/SubHeading.tsx";
+import Typing from "../islands/Typing.tsx";
 
 export default function Home() {
-  const count = useSignal(3);
   return (
-    <div class="px-4 py-8 mx-auto bg-[#86efac]">
-      <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
+    <div class="overflow-hidden flex flex-row">
+      <section
+        id="static-info"
+        class="h-screen w-5/12 px-16 bg-[#0e1d24] flex flex-col items-center justify-center overflow-hidden text-white"
+      >
         <img
           class="my-6"
-          src="/logo.svg"
+          src="/logo.png"
           width="128"
           height="128"
           alt="the Fresh logo: a sliced lemon dripping with juice"
         />
-        <h1 class="text-4xl font-bold">Welcome to Fresh</h1>
-        <p class="my-4">
-          Try updating this message in the
-          <code class="mx-2">./routes/index.tsx</code> file, and refresh.
-        </p>
-        <Counter count={count} />
-      </div>
+        <div class="w-full ">
+          <h1 class="text-5xl font-bold">Rafael Libório</h1>
+          <SubHeading>
+            {`I'm `}
+            <Typing
+              inputs={[
+                "a Developer",
+                "a Game Enthusiast",
+                "a Father",
+                "a Creator",
+                "Excalimbito",
+              ]}
+            />
+          </SubHeading>
+        </div>
+      </section>
+      <section id="dynamic-info" class="w-7/12">
+        INFO HERE
+      </section>
     </div>
   );
 }
