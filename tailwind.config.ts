@@ -10,6 +10,7 @@ export default {
         black: "#323232",
         gray: "#44433B",
         white: "#C7C1B7",
+        primary: "#0f0d24",
       },
       animation: {
         typewriter: "typewriter 3000ms steps(var(--steps)) infinite",

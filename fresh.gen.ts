@@ -8,9 +8,14 @@ import * as $api_joke from "./routes/api/joke.ts";
 import * as $fresh_index from "./routes/fresh/index.tsx";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
-import * as $Counter from "./islands/Counter.tsx";
-import * as $Header from "./islands/Header.tsx";
-import * as $Typing from "./islands/Typing.tsx";
+import * as $inventory_layout from "./routes/inventory/_layout.tsx";
+import * as $inventory_index from "./routes/inventory/index.tsx";
+import * as $counter from "./islands/counter.tsx";
+import * as $header from "./islands/header.tsx";
+import * as $navigation_hooks from "./islands/navigation/hooks.tsx";
+import * as $navigation_navigation from "./islands/navigation/navigation.tsx";
+import * as $social_links from "./islands/social-links.tsx";
+import * as $type_text from "./islands/type-text.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -21,11 +26,16 @@ const manifest = {
     "./routes/fresh/index.tsx": $fresh_index,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
+    "./routes/inventory/_layout.tsx": $inventory_layout,
+    "./routes/inventory/index.tsx": $inventory_index,
   },
   islands: {
-    "./islands/Counter.tsx": $Counter,
-    "./islands/Header.tsx": $Header,
-    "./islands/Typing.tsx": $Typing,
+    "./islands/counter.tsx": $counter,
+    "./islands/header.tsx": $header,
+    "./islands/navigation/hooks.tsx": $navigation_hooks,
+    "./islands/navigation/navigation.tsx": $navigation_navigation,
+    "./islands/social-links.tsx": $social_links,
+    "./islands/type-text.tsx": $type_text,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

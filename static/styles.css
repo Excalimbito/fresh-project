@@ -9,4 +9,9 @@
   background-color: #C7C1B7;
   color: #323232;
   font-family: 'GeistMono';
+  scroll-behavior: smooth;
+}
+
+.clip-container {
+  clip: rect(auto, auto, auto, auto);
 }
